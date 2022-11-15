@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Calidad del Aire',
+      title: 'CAEP',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.green,
       ),
       home: const MyHomePage(title: 'Calidad del Aire'),
     );
@@ -34,15 +34,42 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        //title: Text(widget.title),
+        //centerTitle: true,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: 200,
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(
+                        'calidadAire/calidad_aire/img/logo_size.jpg'),
+                    fit: BoxFit.cover),
+              ),
+            ),
+            /* Image.asset(
+              'calidadAire/calidad_aire/img/logo_size.jpg',
+              fit: BoxFit.contain,
+              height: 32,
+            ),
+            Container(
+                padding: const EdgeInsets.all(8.0), child: Text('YourAppTitle'))*/
+          ],
+        ),
       ),
-      body: Center(
+      body: Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image:
+                    AssetImage('calidadAire/calidad_aire/img/logo_size.jpg'))),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             TextFormField(
               decoration: const InputDecoration(
-                icon: Icon(Icons.person),
+                icon: Icon(Icons.account_circle_outlined),
                 hintText: 'Escriba su nombre',
                 labelText: 'Nombre *',
               ),
@@ -57,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             TextFormField(
               decoration: const InputDecoration(
-                icon: Icon(Icons.person),
+                icon: Icon(Icons.accessibility),
                 hintText: 'Escriba su edad',
                 labelText: 'Edad *',
               ),
@@ -70,12 +97,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     : null;
               },
             ),
-            ElevatedButton(
+            ElevatedButton.icon(
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => calidad()));
               },
-              child: const Text('Ingresar'),
+              label: Text("Enviar"),
+              icon: Icon(Icons.arrow_circle_right),
             ),
           ],
         ),
