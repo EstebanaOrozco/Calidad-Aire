@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\jseba\OneDrive\Escritorio\calidadAire\calidad_aire\build\windows\CMakeFiles\d42aea98c3e1348fb7c932e2fe93f064\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{9AD01E47-8BF6-3893-8275-2B1848BDCC29}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

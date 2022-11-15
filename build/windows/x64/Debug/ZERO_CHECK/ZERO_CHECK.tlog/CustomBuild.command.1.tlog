@@ -1,0 +1,10 @@
+^C:\USERS\JSEBA\ONEDRIVE\ESCRITORIO\CALIDADAIRE\CALIDAD_AIRE\BUILD\WINDOWS\CMAKEFILES\43083971D4126EC0EA49241D3EACBB3A\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/jseba/OneDrive/Escritorio/calidadAire/calidad_aire/windows -BC:/Users/jseba/OneDrive/Escritorio/calidadAire/calidad_aire/build/windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/jseba/OneDrive/Escritorio/calidadAire/calidad_aire/build/windows/calidad_aire.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

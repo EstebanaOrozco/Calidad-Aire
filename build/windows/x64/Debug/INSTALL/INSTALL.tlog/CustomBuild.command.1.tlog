@@ -1,0 +1,10 @@
+^C:\USERS\JSEBA\ONEDRIVE\ESCRITORIO\CALIDADAIRE\CALIDAD_AIRE\BUILD\WINDOWS\CMAKEFILES\43083971D4126EC0EA49241D3EACBB3A\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
