@@ -4,34 +4,38 @@ import 'model/aire.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class calidad extends StatelessWidget {
+class VistaDetalle extends StatefulWidget {
+  @override
+  State<VistaDetalle> createState() => _VistaDetalleState();
+}
+
+class _VistaDetalleState extends State<VistaDetalle> {
   final _formKey = GlobalKey<FormState>();
 
   AireService aireService = AireService();
+
   Aire aire = Aire();
 
   String currentWeather = "";
+
   double nivel = 0;
+
   String reco = "";
-/*
+
   @override
   void initState() {
     super.initState();
-    getAiredata();
+    AireService.setData(aire: aire);
   }
 
   void getAiredata() async {
-    aire = await AireService.getAire("Canada");
-
     setState(() {
       //currentWeather = aire.condition;
       nivel = aire.nivel;
       reco = aire.recomendacion;
     });
-    print(aire.nivel);
-    print(aire.recomendacion);
   }
-*/
+
   @override
   Widget build(BuildContext context) {
     final ButtonStyle style =
