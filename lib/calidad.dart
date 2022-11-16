@@ -25,7 +25,6 @@ class _VistaDetalleState extends State<VistaDetalle> {
   @override
   void initState() {
     super.initState();
-    AireService.setData(aire: aire);
   }
 
   void getAiredata() async {

@@ -63,6 +63,8 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 log('EL nombre es ${_nameController.text} y la edad ${_ageController.text}');
                 //AireService.setData(aire: Aire());
+                AireService.setData(
+                    data: [_ageController.text, '6.2476', '75.5658']);
                 Navigator.push(
                   context,
                   MaterialPageRoute(
