@@ -6,8 +6,7 @@ import 'package:http/http.dart' as http;
 import 'package:calidad_aire/model/aire.dart';
 
 class AireService {
-  static Future<int> setData({required List<String> data}) async {
-    int res = -1;
+  static Future<String> setData({required List<String> data}) async {
     try {
       var client = http.Client();
       final uri = Uri.parse('http://34.231.87.66:8080/userdata');
@@ -15,13 +14,11 @@ class AireService {
           body: {'data': '${data[0]};${data[1]};${data[2]}'},
           headers: {'Accept': '*/*'});
 
-      res = 0;
-      log('${response.body}');
-      return res;
+      return response.body;
     } catch (e) {
       log(e.toString());
     }
-    return res;
+    return 'e';
   }
 
   /* static Future<void> getAire(String place) async {
