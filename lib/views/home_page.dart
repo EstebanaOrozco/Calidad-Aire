@@ -1,10 +1,10 @@
 import 'dart:developer';
 
-import 'package:calidad_aire/calidad.dart';
-import 'package:calidad_aire/model/aire.dart';
-import 'package:calidad_aire/services/Aire_service.dart';
-import 'package:calidad_aire/services/location_service.dart';
-import 'package:calidad_aire/widgets/custom_app_bar.dart';
+import 'package:caep_1/calidad.dart';
+import 'package:caep_1/model/aire.dart';
+import 'package:caep_1/services/Aire_service.dart';
+import 'package:caep_1/services/location_service.dart';
+import 'package:caep_1/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -28,11 +28,45 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(),
-      body: Center(
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+          image: AssetImage('assets/img/fondo.png'),
+          fit: BoxFit.cover,
+          colorFilter: new ColorFilter.mode(
+              Colors.black.withOpacity(0.5), BlendMode.dstATop),
+        )),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('Ttitulo'),
+            Text(
+              'Bienvenido a CAEP',
+              style: TextStyle(
+                fontSize: 40,
+                fontFamily: 'Quicksand',
+                foreground: Paint()
+                  ..style = PaintingStyle.stroke
+                  ..strokeWidth = 2
+                  ..color = Colors.black,
+              ),
+            ),
+            const SizedBox(height: 10),
+            Padding(
+              padding: EdgeInsets.all(20), //apply padding to all four sides
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'Este sistema le permitira recibir recomendaciones de acuerdo a la caludad del aire en el lugar que se encuentre en el área metropolitana',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      fontFamily: 'Quicksand',
+                    ),
+                  ),
+                ],
+              ),
+            ),
             const SizedBox(height: 10),
             Text(
               _lat == 0.0
@@ -40,7 +74,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   : 'Vas a ingresar con los siguientes datos: $_lat,$_long',
               textAlign: TextAlign.center,
               style: const TextStyle(
-                fontSize: 15,
+                fontSize: 18,
+                fontFamily: 'Quicksand',
+                fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 10),

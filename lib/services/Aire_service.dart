@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
-import 'package:calidad_aire/model/aire.dart';
+import 'package:caep_1/model/aire.dart';
 
 class AireService {
   static Future<String> setData({required List<String> data}) async {
@@ -24,10 +24,8 @@ class AireService {
   /* static Future<void> getAire(String place) async {
     try {
       var client = http.Client();
-
       final uri = Uri.parse('http://34.231.87.66:8080/userdata');
       final response = await client.get(uri);
-
       if (response.statusCode == 200) {
         log(response.toString());
         //return Aire.fromJson(jsonDecode(response.body));
