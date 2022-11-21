@@ -1,10 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.calidad_aire">
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    package="com.example.caep_1">
    <application
-        android:label="calidad_aire"
+        android:label="caep_1"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

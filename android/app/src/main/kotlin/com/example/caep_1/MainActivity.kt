@@ -1,4 +1,4 @@
-package com.example.calidad_aire
+package com.example.caep_1
 
 import io.flutter.embedding.android.FlutterActivity
 
