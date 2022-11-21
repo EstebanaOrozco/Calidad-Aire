@@ -9,7 +9,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text("Prueba"),
+          Text("CAEP"),
           Image.asset("assets/img/logo_size.jpg"),
         ],
       ),

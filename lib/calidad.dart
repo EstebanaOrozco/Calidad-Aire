@@ -1,10 +1,11 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:calidad_aire/services/Aire_service.dart';
+import 'package:caep_1/services/Aire_service.dart';
 import 'model/aire.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:caep_1/widgets/custom_app_bar.dart';
 
 class VistaDetalle extends StatefulWidget {
   const VistaDetalle({
@@ -49,11 +50,15 @@ class _VistaDetalleState extends State<VistaDetalle> {
     final ButtonStyle style =
         ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20));
     return Scaffold(
-      appBar: AppBar(
-        title: Text('CAEP'),
-        centerTitle: true,
-      ),
+      appBar: const CustomAppBar(),
       body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+          image: AssetImage('assets/img/fondo.png'),
+          fit: BoxFit.cover,
+          colorFilter: new ColorFilter.mode(
+              Colors.black.withOpacity(0.5), BlendMode.dstATop),
+        )),
         alignment: Alignment.center,
         padding: const EdgeInsets.all(16.0),
         child: Form(
